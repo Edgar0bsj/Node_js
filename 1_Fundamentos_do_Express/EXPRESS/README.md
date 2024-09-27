@@ -47,4 +47,4 @@ app.listen(4000,function(erro){
 node index.js
 
 ```
-O servidor estará disponível em http://localhost:3000.
+O servidor estará disponível em http://localhost:4000.
