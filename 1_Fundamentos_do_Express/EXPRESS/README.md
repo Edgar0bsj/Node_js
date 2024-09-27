@@ -11,15 +11,16 @@ Este projeto utiliza o framework Express.js para criar um servidor Node.js simpl
 ### Inicializar o projeto
 No diretório do seu projeto, inicialize o npm:  
 ```
-npm init -y
+npm init
 ```
 Isso cria o arquivo package.json.  
+Lembrando de mudar o nome do projeto.
 
 
 ### Instalar dependências Instale o Express:  
 
 ```
-npm install express
+npm install express --save
 ```
 
 ### Configuração básica do servidor
