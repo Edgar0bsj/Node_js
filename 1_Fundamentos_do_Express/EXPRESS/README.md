@@ -1,45 +1,56 @@
 # 📜 Projeto Express.js
-
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-
+<img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express" /> 
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> 
+<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" /> 
 
 <img src="https://miro.medium.com/v2/resize:fit:1400/1*0xWhD2FQZJT84o7jAAkGRg.jpeg" alt="imagem">
 
+> Este projeto utiliza o framework Express.js para criar um servidor Node.js simples.
 
-
-<!------------------------------------------------------ -->
-
-Este projeto utiliza o framework Express.js para criar um servidor Node.js simples.
 
 ## Menu
 
-- [Startando um Projeto](#Como iniciar o projeto)
-- [Instalando o Express](#como-usar-os-badges-shields)
+- [Requisitos](#Requisitos)
+- [Startando Projeto](#Startando-Projeto)
 
-# Como iniciar o projeto 
-Requisitos:
-> Node.js: Certifique-se de ter o Node.js instalado.  
-> NPM: Instalado junto com o Node.js  
+## Requisitos
+> [!WARNING]
+> Node.js
+> NPM
+
+# 🔥 Startando Projeto 
+
+> [!IMPORTANT]
+> No diretório do seu projeto.
+
+<details>
+
+<summary>Iniciando um projeto</summary>
+
+### Comandos Necessário
+
+Iniciando o npm 
+```bash
+   npm init
+```
+
+Instando dependência
+```bash
+   npm install
+```
+
+Instalando o Express
+```bash
+   npm install express --save
+```
+> [!CAUTION]
+> Se o nome do projeto for 'Express' dará problemas no futuro.
+
+</details>
 
 
-## Instalação do Express 🔥
-### Inicializar o projeto
-No diretório do seu projeto, inicialize o npm:  
-```
-npm init
-```
-Isso cria o arquivo package.json.  
-Lembrando que o nome do projeto não pode ser EXPRESS.  
-```
-npm install
-```
+# Instalando o Express
 
-
-### Instalar dependências Instale o Express:  
-
-```
-npm install express --save
-```
 
 ### Configuração básica do servidor
 Crie um arquivo index.js com o seguinte conteúdo:
