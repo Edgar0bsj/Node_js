@@ -7,9 +7,23 @@ app.get("/", function(req,res){ // Rota do tipo get
     res.send("Olá Mundo!");
 });
 
-app.get("/blog", function(req,res){ // Rota do tipo get
-    res.send("Bem vindo ao meu blog");
+app.get("/blog/:artigo?", function(req,res){ // Paramentro (artigo) opcional pq vem seguido de (?)
+    let artigo = req.params.artigo;
+
+    if (artigo) {
+        res.send(`<h2>Artigo: ${artigo} </h2>`)
+    }else{
+        res.send("Bem vindo ao meu blog");
+    }
 });
+
+app.get("/ola/:nome/:sobrenome", function(req, res){ // Pegando parametros na requisições
+    let nome = req.params.nome;
+    let sobrenome = req.params.sobrenome;
+
+    res.send(`<h1>Olá senhor: ${nome} ${sobrenome}</h2>`);
+})
+
 
 app.get("/canal/youtube", function(req,res){ // Rota do tipo get
     res.send("<h1>Bem vindo ao meu canal!</h1>");
