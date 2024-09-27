@@ -45,6 +45,18 @@ app.listen(4000,function(erro){
 ### Para rodar o servidor, execute:
 ```
 node index.js
-
 ```
 O servidor estará disponível em http://localhost:4000.
+
+## Nodemon
+Adicionar o nodemon ao projeto facilita o desenvolvimento, pois ele reinicia automaticamente o servidor sempre que algum arquivo é alterado.  
+```
+npm install nodemon -g
+```
+
+### Rodar o servidor com Nodemon:
+execute:
+
+```
+nodemon index.js
+```
