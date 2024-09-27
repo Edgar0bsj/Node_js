@@ -25,8 +25,14 @@ app.get("/ola/:nome/:sobrenome", function(req, res){ // Pegando parametros na re
 })
 
 
-app.get("/canal/youtube", function(req,res){ // Rota do tipo get
-    res.send("<h1>Bem vindo ao meu canal!</h1>");
+app.get("/canal/youtube", function(req,res){ // Exemplo com Query params
+    let canal =  req.query["canal"];
+
+    if (canal) { // ao final da url (?canal=QualquerCoisa)
+        res.send(`<p>Pegando dados com Query params ${canal}</p>`);
+    }else{
+        res.send("<h1>Bem vindo ao meu canal!</h1>");
+    }
 });
 
 
