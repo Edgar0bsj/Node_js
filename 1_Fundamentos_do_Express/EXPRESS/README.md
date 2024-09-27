@@ -29,17 +29,16 @@ npm install express --save
 ### Configuração básica do servidor
 Crie um arquivo index.js com o seguinte conteúdo:
 ```
-const express = require('express');
-const app = express();
-const port = 3000;
+const express = require("express"); // Importando o express
+const app = express(); // Iniciando o express
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
-});
+app.listen(4000,function(erro){
+    if (erro) {
+        console.log("Ocorreu um erro!");
+    }else{
+        console.log(`Servidor rodando em http://localhost:4000`);
+    }
+})
 
 ```
 
