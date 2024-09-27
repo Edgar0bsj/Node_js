@@ -4,7 +4,7 @@ const app = express(); // Iniciando o express
 
 
 app.get("/", function(req,res){ // Rota do tipo get
-    res.send("Olá Mundo!");
+    res.send("Olá Mundão!");
 });
 
 app.get("/blog/:artigo?", function(req,res){ // Paramentro (artigo) opcional pq vem seguido de (?)
@@ -26,9 +26,9 @@ app.get("/ola/:nome/:sobrenome", function(req, res){ // Pegando parametros na re
 
 
 app.get("/canal/youtube", function(req,res){ // Exemplo com Query params
-    let canal =  req.query["canal"];
+    let canal =  req.query["canal"];  // ao final da url (?canal=QualquerCoisa)
 
-    if (canal) { // ao final da url (?canal=QualquerCoisa)
+    if (canal) {
         res.send(`<p>Pegando dados com Query params ${canal}</p>`);
     }else{
         res.send("<h1>Bem vindo ao meu canal!</h1>");

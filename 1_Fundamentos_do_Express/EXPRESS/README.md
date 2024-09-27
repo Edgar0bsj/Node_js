@@ -1,8 +1,23 @@
-# Projeto Express.js 📜
+# 📜 Projeto Express.js
+
+![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
+
+
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*0xWhD2FQZJT84o7jAAkGRg.jpeg" alt="imagem">
+
+
+
+<!------------------------------------------------------ -->
+
 Este projeto utiliza o framework Express.js para criar um servidor Node.js simples.
 
-## Como iniciar o projeto 
-1. Requisitos:
+## Menu
+
+- [Startando um Projeto](#Como iniciar o projeto)
+- [Instalando o Express](#como-usar-os-badges-shields)
+
+# Como iniciar o projeto 
+Requisitos:
 > Node.js: Certifique-se de ter o Node.js instalado.  
 > NPM: Instalado junto com o Node.js  
 
