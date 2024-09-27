@@ -14,7 +14,10 @@ No diretório do seu projeto, inicialize o npm:
 npm init
 ```
 Isso cria o arquivo package.json.  
-Lembrando de mudar o nome do projeto.
+Lembrando que o nome do projeto não pode ser EXPRESS.  
+```
+npm install
+```
 
 
 ### Instalar dependências Instale o Express:  
