@@ -82,7 +82,7 @@ app.get('/', (req, res) => {
     res.send('Hello, World!');
 });
 ```
-- `/` -> : A rota que será correspondida. Aqui, estamos usando a rota raiz (home page).
+- `/` -> A rota que será correspondida. Aqui, estamos usando a rota raiz (home page).
 - `req` -> Representa a requisição recebida pelo servidor. Se o cliente enviar parâmetros ou dados, eles podem ser acessados através deste objeto.
 - `res.send()` -> Método usado para enviar uma resposta ao cliente. Nesse caso, uma simples mensagem "Hello, World!" será enviada.
 
@@ -97,6 +97,6 @@ app.listen(4000,function(erro){
     }
 }) 
 ```
-- `port` -> : Número da porta em que o servidor vai escutar as requisições (ex: 4000, 8080).
-- `callback` -> : se ocorre um erro a variavel erro sera setada.
+- `port` -> Número da porta em que o servidor vai escutar as requisições (ex: 4000, 8080).
+- `callback` -> Se ocorre um erro a variavel erro sera setada.
 </details>
