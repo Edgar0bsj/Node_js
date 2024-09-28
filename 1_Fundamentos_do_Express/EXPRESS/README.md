@@ -33,7 +33,7 @@ Iniciando o npm
    npm init
 ```
 
-Instando dependência
+Instalando dependência
 ```bash
    npm install
 ```
@@ -42,7 +42,6 @@ Instalando o Express
 ```bash
    npm install express --save
 ```
-> [!OBS]
 > Se o nome do projeto for 'Express' dará problemas no futuro.  
 
 Instalando o Nodemon
@@ -70,3 +69,34 @@ Rodar o servidor com Nodemon:
 - [x] /views -> (HTML)
 - [x] /public -> (JS/CSS, imagens)
 
+# Rotas
+<details>
+
+<summary>Método de Rota</summary>
+
+### Método Necessário
+Método GET
+> É o método usado para definir como o servidor Express vai responder a requisições HTTP GET, permitindo configurar rotas e enviar respostas ao cliente.
+```javascript
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
+});
+```
+- `<'/'>` -> : A rota que será correspondida. Aqui, estamos usando a rota raiz (home page).
+- `<req>` -> Representa a requisição recebida pelo servidor. Se o cliente enviar parâmetros ou dados, eles podem ser acessados através deste objeto.
+- `<res.send()>` -> Método usado para enviar uma resposta ao cliente. Nesse caso, uma simples mensagem "Hello, World!" será enviada.
+
+Método Listen
+> É o comando que efetivamente "liga" o servidor, fazendo com que ele comece a receber requisições.
+```javascript
+app.listen(4000,function(erro){
+    if (erro) {
+        console.log("Ocorreu um erro!");
+    }else{
+        console.log(`Servidor rodando em http://localhost:4000`);
+    }
+}) 
+```
+- `<'port'>` -> : Número da porta em que o servidor vai escutar as requisições (ex: 4000, 8080).
+- `<'callback'>` -> : se ocorre um erro a variavel erro sera setada.
+</details>
