@@ -3,10 +3,10 @@
 ## Menu
 
 - [💻 Pré-requisitos](#Pré-requisitos)
-- [(1) NPM comandos](#(1)-NPM-comandos)
-- [(2) App.js](#(2)-App.js)
-- [(3) Views](#(3)-Views)
-- [(4) Public](#(4)-Public)
+- [Iniciando o Projeto](#NPM-comandos)
+- [App.js](#App)
+- [Views](#Views)
+- [Public](#Public)
 
 ## Pré-requisitos
 > [!WARNING]
@@ -18,7 +18,7 @@
 > [!IMPORTANT]
 > No diretório do seu projeto.
 
-## (1) NPM comandos
+## NPM comandos
 
 Iniciando um projeto
 ```bash
@@ -37,7 +37,7 @@ npm install nodemon -g
 ```
 > Esse -g indica para estalar globalmente, com isso não tera que fica instalando nos projetos futuros!
 
-## (2) App.js
+## App
 
 nome-do-projeto/  
 ├── node_modules/  
@@ -66,13 +66,13 @@ app.listen(8080,function(){
 ## (OPCIONAL) Adicionar Script para Rodar o Servidor
 No arquivo `package.json`, adicione um script para facilitar o start do servidor. Abra o arquivo e, na seção "scripts", adicione:
 ```javascript
-"start": "nodemon index.js"
+"start": "nodemon app.js"
 ```
 > Agora para rodar o servidor basta apenas escrever esse código:
 ```bash
 npm start
 ```
-## (3) Views
+## Views
 O Express procura por arquivos de views na pasta views por padrão. Crie um diretório chamado views na raiz do seu projeto:
 
 nome-do-projeto/  
@@ -105,15 +105,12 @@ app.get('/', (req, res) => {
   const itens = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
 
   // Renderizar a view 'index.ejs' e passar o array 'itens'
-  res.render('index', { title: 'Lista de Itens', itens: itens });
+  res.render('index', { itens: itens });
 });
 ```
 
 ### Usar forEach na View (EJS)
 ```html
-<body>
-  <h1><%= title %></h1>
-
   <ul>
     <% itens.forEach(function(item) { %>
       <li><%= item %></li>
@@ -133,7 +130,7 @@ app.get('/', (req, res) => {
   ];
 
   // Renderizar a view 'index.ejs' e passar o array 'produtos'
-  res.render('index', { title: 'Lista de Produtos', produtos: produtos });
+  res.render('index', { produtos: produtos });
 });
 ```
 ### Usar forEach na View (EJS)
@@ -149,7 +146,7 @@ app.get('/', (req, res) => {
   </ul>
 ```
 
-## (4) Public
+## Public
 Crie uma pasta chamada public na raiz do seu projeto para armazenar os arquivos estáticos:
 
 nome-do-projeto/  
