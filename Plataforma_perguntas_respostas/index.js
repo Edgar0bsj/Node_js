@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 
 app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 app.get('/:nome/:leng', function(req, res) {
     let variavel_nome = req.params.nome;
