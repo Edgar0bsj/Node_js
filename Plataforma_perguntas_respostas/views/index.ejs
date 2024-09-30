@@ -16,6 +16,15 @@
     <% }else{ %>
         <h1><%= nome %> não é um admin :/</h1>
     <% } %>
+    <hr>
+
+    <% produtos.forEach(function(elemento){ %>
+        <%= elemento.nome %> <br>
+
+        Preço:<%= elemento.preco %> <br>
+
+
+    <% }) %>
 
 
 </body>
