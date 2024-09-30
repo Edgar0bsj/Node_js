@@ -72,6 +72,8 @@ No arquivo `package.json`, adicione um script para facilitar o start do servidor
 ```bash
 npm start
 ```
+<hr>
+
 ## Views
 O Express procura por arquivos de views na pasta views por padrão. Crie um diretório chamado views na raiz do seu projeto:
 
@@ -109,7 +111,7 @@ app.get('/', (req, res) => {
 });
 ```
 
-### Usar forEach na View (EJS)
+### (Array) forEach na View (EJS)
 ```html
   <ul>
     <% itens.forEach(function(item) { %>
@@ -133,7 +135,7 @@ app.get('/', (req, res) => {
   res.render('index', { produtos: produtos });
 });
 ```
-### Usar forEach na View (EJS)
+### (Objeto) forEach na View (EJS)
 ```html
   <ul>
     <% produtos.forEach(function(produto) { %>
@@ -145,6 +147,29 @@ app.get('/', (req, res) => {
     <% }); %>
   </ul>
 ```
+
+### Exemplo de Condicional na View (EJS)
+> index.ejs com else if
+```html
+<!-- views/index.ejs -->
+<ul>
+  <% produtos.forEach(function(produto) { %>
+    <li>
+      <h2><%= produto.nome %></h2>
+      <p>Preço: R$ <%= produto.preco %></p>
+
+      <% if (produto.preco > 2000) { %>
+        <p>Produto premium.</p>
+      <% } else if (produto.preco > 1500) { %>
+        <p>Produto de faixa média.</p>
+      <% } else { %>
+        <p>Produto acessível.</p>
+      <% } %>
+    </li>
+  <% }); %>
+</ul>
+```
+<hr>
 
 ## Public
 Crie uma pasta chamada public na raiz do seu projeto para armazenar os arquivos estáticos:
