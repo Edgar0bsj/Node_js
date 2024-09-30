@@ -67,13 +67,13 @@ npm start
 ## (3) Views
 O Express procura por arquivos de views na pasta views por padrão. Crie um diretório chamado views na raiz do seu projeto:
 
-nome-do-projeto/
-├── node_modules/
-├── views/ <---------
-│   └── index.ejs <---------
-├── app.js
-├── package.json
-└── package-lock.json
+nome-do-projeto/  
+├── node_modules/  
+├── views/ <---------  
+│   └── index.ejs <---------  
+├── app.js  
+├── package.json  
+└── package-lock.json  
 
 ### Configurar o Express para Usar EJS
 No arquivo principal do seu servidor, adicione o código para configurar o Express a usar o motor de templates EJS:
@@ -92,19 +92,19 @@ app.get('/', (req, res) => {
 ## (4) Public -> arquivos estáticos
 Crie uma pasta chamada public na raiz do seu projeto para armazenar os arquivos estáticos:
 
-nome-do-projeto/
-├── node_modules/
-├── public/ <---------
-│   ├── css/ <---------
-│   │   └── style.css <---------
-│   ├── images/ <---------
-│   │   └── logo.png <---------
-│   └── js/
-├── views/
-│   └── index.ejs
-├── app.js
-├── package.json
-└── package-lock.json
+nome-do-projeto/  
+├── node_modules/  
+├── public/ <---------  
+│   ├── css/ <---------  
+│   │   └── style.css <---------  
+│   ├── images/ <---------  
+│   │   └── logo.png <---------  
+│   └── js/  
+├── views/  
+│   └── index.ejs  
+├── app.js  
+├── package.json  
+└── package-lock.json  
 
 ### Configurar o Express para Servir Arquivos Estáticos
 No arquivo principal do seu servidor, adicione o código para indicar a pasta public:
