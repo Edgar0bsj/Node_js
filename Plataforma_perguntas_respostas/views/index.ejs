@@ -10,5 +10,13 @@
     <hr>
     <p>Nome: <%= nome %></p>
     <p>Linguagem favorita: <%= lang %></p>
+
+    <% if(admin === true){ %>
+        <h1><%= nome %> é um admin ;D</h1>
+    <% }else{ %>
+        <h1><%= nome %> não é um admin :/</h1>
+    <% } %>
+
+
 </body>
 </html>
