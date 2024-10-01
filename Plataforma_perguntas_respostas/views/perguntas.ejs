@@ -1,0 +1,26 @@
+<%- include('base/header.ejs') %>
+<body>
+    <%- include('base/navbar.ejs') %>
+    <div class="container text-center">
+        <div class="card" id="form-perguntas">
+            <div class="card-header">
+                <h1>Perguntas</h1>
+            </div>
+            <div class="card-body">
+                <form class="row g-3" action="#" method="get">
+                    <label class="form-label">Titulo</label>
+                    <input class="form-control" type="text" placeholder="Titulo">
+
+                    <br><label class="form-label">Descrição</label>
+                    <input class="form-control" type="text" placeholder="Descrição">
+                    
+                    <br><button class="btn btn-primary">Salvar</button>
+                </form>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+<%- include('base/footer.ejs') %>
