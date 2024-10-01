@@ -64,7 +64,7 @@ app.listen(8080,function(){
 ```
 
 ## (OPCIONAL) Adicionar Script para Rodar o Servidor
-No arquivo `package.json`, adicione um script para facilitar o start do servidor. Abra o arquivo e, na seção "scripts", adicione:
+No arquivo `package.json`, adicione um script para facilitar o start do servidor. Abra o arquivo e, na seção `"scripts"`, adicione:
 ```javascript
 "start": "nodemon app.js"
 ```
@@ -72,6 +72,29 @@ No arquivo `package.json`, adicione um script para facilitar o start do servidor
 ```bash
 npm start
 ```
+
+## BODY PARSER
+permite que você acesse e manipule os dados enviados por formulários, JSON, ou outros tipos de dados através de requisições POST ou PUT.
+> No terminal, na raiz do seu projeto Express, execute o comando:
+```bash
+npm install body-parser
+```
+> Após a instalação, você precisa configurar o middleware no seu aplicativo Express.
+```JS
+const bodyParser = require('body-parser'); // Importar o body-parser
+
+// Configurar body-parser para processar dados no formato JSON e URL-encoded
+app.use(bodyParser.json()); // Para processar dados no formato JSON
+app.use(bodyParser.urlencoded({ extended: true })); // Para processar dados de formulários (URL-encoded)
+
+// Exemplo de rota que recebe dados de um formulário via POST
+app.post('/form', (req, res) => {
+  const nome = req.body.nome;
+  const idade = req.body.idade;
+  res.send(`Nome: ${nome}, Idade: ${idade}`);
+});
+```
+
 <hr>
 
 ## Views

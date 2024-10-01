@@ -14,10 +14,10 @@ app.set('view engine', 'ejs');
 // Indica a pasta statica
 app.use(express.static('public'));
 
-// traduzindo pra js os dados pegado pelo 'POST'
+// Para processar dados de formulários (URL-encoded)
 app.use(bodyParser.urlencoded({extended: false}));
 
-// traduzindo para json os dados pegos
+// Para processar dados no formato JSON
 app.use(bodyParser.json());
 
 /*
