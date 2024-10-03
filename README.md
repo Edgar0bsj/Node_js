@@ -13,6 +13,15 @@
 > Node.js  
 > NPM
 
+# Bibliotecas necessárias 
+- [x] `npm install express --save`
+- [x] `npm install ejs --save`
+- [x] `npm install nodemon -g`
+- [x] `npm install body-parser --save`
+- [x] `npm install sequelize --save` 
+- [x] `npm install sqlite3 --save` 
+
+
 # Startando Projeto
 
 > [!IMPORTANT]
