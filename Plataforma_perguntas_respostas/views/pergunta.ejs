@@ -1,0 +1,21 @@
+<%- include('base/header.ejs') %>
+<body>
+    <%- include('base/navbar.ejs') %>
+    <div class="container text-center">
+        <hr>
+        <h1><%= perguntas.titulo %></h1>
+        <p><%= perguntas.descricao %></p>
+        <hr>
+        <form action="/responder" method="post">
+            <h3>Responda</h3>
+            <label for="corpo">Resposta</label><br>
+            <textarea name="corpo" id="" cols="100" rows="10"></textarea><br>
+            <input type="hidden" name="pergunta" value="<%= perguntas.id %>">
+            <button type="submit" class="btn btn-primary">Responder</button>
+        </form>
+
+    </div>
+
+    
+</body>
+<%- include('base/footer.ejs') %>
